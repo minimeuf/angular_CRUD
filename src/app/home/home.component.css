@@ -1,0 +1,71 @@
+
+button{
+	display:inline-block;
+	font-size:20px;
+	width:140px;
+	height:40px;
+	border: none;
+	position: relative;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 10%;
+	box-shadow:rgb(124, 123, 123) 0px 6px 15px 3px;
+}
+
+p{
+	font-family: monospace;
+}
+
+.home-page{
+	margin: 2%;
+	height:300px;
+	width:300px;
+	background:rgba(255, 255, 252, 0.226);
+	box-shadow: rgb(124, 123, 123) 0px 6px 25px 3px;
+	border-radius: 90px;
+	margin-top: 20%;
+	margin-bottom: 12%;
+}
+
+.zoom :hover {
+	width: 160px;
+	height: 50px;
+	color:cadetblue;
+} 
+
+.image-c{
+	height:80px;
+}
+.image{
+	height:110px;
+	width:110px;
+	border-radius:50%;
+	transform:translate(95px,-50px);
+	padding:5px;
+}
+.image img{
+	height:100%;
+	width:100%;
+	border-radius:50%;
+}
+.palo {
+	justify-content: space-between !important;
+}
+ /*mq per home */ 
+ @media only screen and (max-width: 320px) { 
+	 button{
+		
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: 6px;
+	}
+	.image{
+		position: relative;
+		margin-left: -5%;
+	}
+ }
+ @media only screen and (max-width: 425px) {
+	 .palo {
+		 justify-content: center !important;
+	 }
+  }

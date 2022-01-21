@@ -1,0 +1,32 @@
+h2 {
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+}
+
+button{
+
+	border: none;
+	box-shadow: rgb(124, 123, 123) 0px 6px 15px 3px;
+    margin-bottom: 1%;
+}
+
+.dettagli {
+    background:rgba(255, 255, 252, 0.226);
+	box-shadow: rgb(124, 123, 123) 0px 10px 25px 3px;
+	border-radius: 30px;
+    margin-bottom: 5%;
+    padding: 2%;
+}
+
+label {
+   padding-top: 2vw;
+   padding-left: 2vw;
+   margin-bottom: 0%;
+   font-size: 120%;
+}
+
+li {
+    font-family: monospace;
+    background-color: rgba(128, 128, 128, 0);
+}
+

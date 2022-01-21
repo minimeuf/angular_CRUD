@@ -1,0 +1,10 @@
+footer {
+    background-image: none;
+    box-shadow:rgb(124, 123, 123) 0px 0px 25px 0px;
+    height: 90px
+}
+
+.widgets.footer-widgets .single-widget ul li {
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+}

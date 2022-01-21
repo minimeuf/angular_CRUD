@@ -1,0 +1,38 @@
+<nav class="navbar navbar-light">
+   
+    <button class="menu btn m-2" (click)="mostra()" ><i class="bi bi-three-dots-vertical"></i></button>
+    <a class="navbar-brand">EPICODE CRM</a> 
+    <form class="d-flex">
+        <button class="menu btn m-4" [routerLink]="['/']" routerLinkActive="router-link-active">LogIn<i class="bi bi-box-arrow-in-right"></i></button>
+        <button (click)="logOut2()" class="menu btn m-4">LogOut<i class="bi bi-box-arrow-right"></i></button>
+      </form>
+</nav>
+
+
+  <div class="openclose" *ngIf="vedi vedi2">
+    <ul class="mb-3 p-3 " style="list-style-type: none;">
+      <li class="touch">
+        <button (click)="mostra()" class="touch btn form-control m-1" [routerLink]="['/home']" routerLinkActive="router-link-active">HOME</button>
+      </li>
+      <li class="touch">
+        <button (click)="mostra()" class="touch btn form-control m-1" [routerLink]="['/fatture']" routerLinkActive="router-link-active" >FATTURE</button>
+      </li>
+      <li class="touch">
+        <button (click)="mostra()" class="touch btn form-control m-1" [routerLink]="['/clienti']" routerLinkActive="router-link-active">CLIENTI</button>
+      </li>
+      <li class="touch">
+        <button (click)="mostra()" class="touch btn form-control m-1" [routerLink]="['/comuni']" routerLinkActive="router-link-active">COMUNI</button>
+      </li>
+      <li class="touch">
+        <button (click)="mostra()" class="touch btn form-control m-1" [routerLink]="['/province']" routerLinkActive="router-link-active">PROVINCE</button>
+      </li>
+      <li class="log">
+        <button (click)="mostra()" class="btn form-control m-1" [routerLink]="['/']" routerLinkActive="router-link-active">LogIn</button>
+      </li>
+      <li class="log">
+        <button (click)="logOut()" class="btn form-control m-1">LogOut</button>
+      </li>
+    </ul>
+  </div>
+
+  

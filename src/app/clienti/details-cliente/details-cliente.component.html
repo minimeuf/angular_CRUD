@@ -1,0 +1,46 @@
+<h2 class="text-center"><button class="btn m-2" [routerLink]="['/clienti']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left"></i></button>DETTAGLI </h2>
+<div class="dettagli">
+<div class="container mt-5">
+    <ul class="list-group list-group-flush">
+      <label>Nome Contatto</label>
+      <li class="list-group-item">{{details.nomeContatto}}</li>
+      <label>Cognome Contatto</label>
+      <li class="list-group-item">{{details.cognomeContatto}}</li>
+      <label>Telefono</label>
+      <li class="list-group-item">{{details.telefono}}</li>
+      <label>Email</label>
+      <li class="list-group-item">{{details.email}}</li>
+      <label>Ragione Sociale</label>
+      <li class="list-group-item">{{details.ragioneSociale}}</li>
+      <label>Partita IVA</label>
+      <li class="list-group-item">{{details.partitaIva}}</li>
+      <label>Tipo Cliente</label>
+      <li class="list-group-item">{{details.tipoCliente}}</li>
+      <label>PEC</label>
+      <li class="list-group-item">{{details.pec}}</li>
+      <label>Telefono Contatto</label>
+      <li class="list-group-item">{{details.telefonoContatto}}</li>
+      <label>Indirizzo Sede Operativa</label>
+      <li class="list-group-item">{{details.indirizzoSedeOperativa.via}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeOperativa.civico}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeOperativa.cap}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeOperativa.localita}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeOperativa.comune.nome}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeOperativa.comune.provincia.nome}}, {{details.indirizzoSedeOperativa.comune.provincia.sigla}} </li>
+      <label>Indirizzo Sede Legale</label>
+      <li class="list-group-item">{{details.indirizzoSedeLegale.via}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeLegale.civico}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeLegale.cap}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeLegale.localita}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeLegale.comune.nome}}</li>
+      <li class="list-group-item">{{details.indirizzoSedeLegale.comune.provincia.nome}}, {{details.indirizzoSedeLegale.comune.provincia.sigla}} </li>
+      <label>Data Inserimento</label>
+      <li class="list-group-item">{{details.dataInserimento}}</li>
+      <label>Data Ultimo Contatto</label>
+      <li class="list-group-item">{{details.dataUltimoContatto}}</li>
+      <label>Fatturato Annuale</label>
+      <li class="list-group-item">{{details.fatturatoAnnuale}}</li>
+    </ul>
+  </div>
+</div>
+

@@ -1,0 +1,17 @@
+<h2 class="text-center">NUOVA PROVINCIA</h2>
+    <form action="">
+        <div class="form-group row">
+            <div class="col-6">         
+                <input type="text" [(ngModel)]="newProv.nome" class="form-control" name="nomeContatto" placeholder="Nome provincia...">
+            </div>
+            <div class="col-6">
+                <input type="text" [(ngModel)]="newProv.sigla" class="form-control" name="nomeContatto" placeholder="Sigla...">
+            </div>
+        </div>
+    </form>
+<div>
+    <button (click)="CreateNewProvincia(newProv)" class="btn btn-dark form-control mt-5" type="submit"><i class="bi bi-geo-fill" > Aggiungi</i></button>
+</div>
+<div>
+    <button class="btn form-control" type="button" [routerLink]="['/province']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-right"> Torna alle PROVINCE</i></button>
+</div>

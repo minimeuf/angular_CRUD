@@ -1,0 +1,106 @@
+<h2 class="text-center">MODIFICA DATI CLIENTE</h2>
+<div class="EDcl">
+<form class="m-4" action="">
+    <div class="form-group row">
+        <div class="col-6">
+            <input [(ngModel)]="edit.nomeContatto" type="text" class="form-control" name="nomeContatto" placeholder="Nome..." required>
+        </div>
+        <div class="col-6">
+            <input  [(ngModel)]="edit.cognomeContatto" type="text"  class="form-control" name="cognomeContatto" placeholder="Cognome..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.telefono" type="number" class="form-control" name="telefono" placeholder="Telefono..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.email" type="email"  class="form-control" name="email" placeholder="Email ..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.ragioneSociale" type="text" class="form-control" name="ragioneSociale" placeholder="Ragione Sociale ..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.partitaIva" type="number" class="form-control" name="partitaIva" placeholder="P.Iva ..." required>
+        </div>
+        <div class="col-6">
+            <select [(ngModel)]="edit.tipoCliente" class="form-control" name="tipoCliente" required>
+                <option selected>Seleziona Tipo Cliente...</option>
+                <option>SPA</option>
+                <option>SAS</option>
+                <option>PA</option>
+                <option>SRL</option>
+                <option>SR</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.pec" type="email"  class="form-control" name="pec" placeholder="Pec..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.telefonoContatto"  type="number"  class="form-control" name="telefonoContatto" placeholder="Telefono Contatto..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.emailContatto"  type="email"  class="form-control" name="emailContatto" placeholder="Email Contatto..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.dataInserimento"  type="text"  class="form-control" name="dataInserimento" placeholder="Data Inserimento..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.dataUltimoContatto"  type="text" class="form-control" name="dataUltimoContatto" placeholder="Data Ultimo Contatto..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="edit.fatturatoAnnuale"  type="number"  class="form-control" name="fatturatoAnnuale" placeholder="Fatturato Annuale..." required>
+        </div>
+        <div class="col-12">
+        <h4 class="text-center mt-4">Indirizzo Sede Operativa</h4>
+    </div>
+            <div class="form-group row">
+            <div class="col-6">
+                <input [(ngModel)]="edit.indirizzoSedeOperativa.via"  type="text" class="form-control" name="via" placeholder="Via ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="edit.indirizzoSedeOperativa.civico"  type="text" class="form-control" name="civico" placeholder="Civico ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="edit.indirizzoSedeOperativa.cap"  type="number" class="form-control" name="cap" placeholder="Cap ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="edit.indirizzoSedeOperativa.localita"  type="text" class="form-control" name="localita" placeholder="Località ...">
+            </div>
+            <div class="col-6">
+            <select class="form-select form-select-lg" [(ngModel)]="edit.indirizzoSedeOperativa.comune" name="nome" aria-label="Default select example" >
+                <option selected  >Comune</option>
+                <option *ngFor="let item of comuni" [ngValue]="item" >{{item.nome}}</option>
+            </select>
+            </div>
+        
+            <div class="form-group row">
+            <div class="col-12">
+                <h4 class="text-center mt-4">Indirizzo Sede Legale</h4>
+            </div>
+                <div class="col-6">
+                <input [(ngModel)]="edit.indirizzoSedeLegale.via"  type="text" class="form-control" name="via" placeholder="Via ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="edit.indirizzoSedeLegale.civico"  type="text" class="form-control" name="civico" placeholder="Civico ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="edit.indirizzoSedeLegale.cap"  type="number" class="form-control" name="cap" placeholder="Cap ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="edit.indirizzoSedeLegale.localita"  type="text" class="form-control" name="localita" placeholder="Località ...">
+            </div>
+            <div class="col-6">
+            <select class="form-select form-select-lg" [(ngModel)]="edit.indirizzoSedeLegale.comune" name="nome" aria-label="Default select example" >
+                <option selected  >Seleziona Comune...</option>
+                <option *ngFor="let item of comuni" [ngValue]="item" >{{item.nome}}</option>
+            </select>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+</div>
+    <div>
+        <button (click)="saveEdit(edit)" class=" btn btn-dark form-control" type="submit"><i class="bi bi-person-plus-fill" > Aggiungi</i></button>
+    </div>
+    <div>
+        <button class=" btn form-control" type="submit" [routerLink]="['/clienti/page/:page']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-right"> Torna a CONTATTI</i></button>
+    </div>

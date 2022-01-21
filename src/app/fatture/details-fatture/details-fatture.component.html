@@ -1,0 +1,24 @@
+<h2 class="text-center"><button class="btn m-2" [routerLink]="['/fatture']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left"></i></button>DETTAGLI </h2>
+<div class="fatture">
+  <div class="container mt-5">
+      <ul class="list-group list-group-flush">
+        <label>Nome Contatto</label>
+        <li class="list-group-item">{{detFattura.cliente.nomeContatto}}</li>
+        <label>Cognome Contatto</label>
+        <li class="list-group-item">{{detFattura.cliente.cognomeContatto}} </li>
+        <label>Ragione Sociale</label>
+        <li class="list-group-item">{{detFattura.cliente.ragioneSociale}}</li>
+        <label>Data</label>
+        <li class="list-group-item">{{detFattura.data}}</li>
+        <label>Numero</label>
+        <li class="list-group-item">{{detFattura.numero}}</li>
+        <label>Anno</label>
+        <li class="list-group-item">{{detFattura.anno}}</li>
+        <label>Importo</label>
+        <li class="list-group-item">{{detFattura.importo}}</li>
+        <label>Stato</label>
+        <li class="list-group-item">{{detFattura.stato.nome}}</li>
+      </ul>
+    </div>
+  </div>
+

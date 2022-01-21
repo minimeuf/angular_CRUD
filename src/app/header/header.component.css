@@ -1,0 +1,35 @@
+nav {
+    background-image: none;
+    
+    box-shadow: rgb(124, 123, 123) 0px 6px 25px 3px;
+}
+div {
+    font-family: monospace;
+    background:rgba(255, 255, 252, 0.226);
+	box-shadow: rgb(124, 123, 123) 0px 6px 25px 3px;
+    border-radius: 90px;
+}
+.touch :hover{
+    background:  rgba(253, 255, 182, 0.356);
+}
+.log :hover{
+    text-decoration: underline 1px solid black;
+}
+.touch{
+    border-radius: 30px;
+}
+.menu{
+
+	border: none;
+	box-shadow: rgb(124, 123, 123) 0px 6px 10px 3px;
+}
+.menu :hover{
+    color:thistle
+}
+@media only screen and (max-width: 768px) { 
+    .openclose{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+    

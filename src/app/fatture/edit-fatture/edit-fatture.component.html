@@ -1,0 +1,38 @@
+<h2 class="text-center">MODIFICA DATI FATTURA</h2>
+<div class="EDcl">
+<form class="m-4" action="">
+    <div class="form-group row">
+        <div class="col-6">
+            <input [(ngModel)]="editFatt.cliente.nomeContatto" type="text"  class="form-control" name="nomeContatto" disabled>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="editFatt.cliente.cognomeContatto" type="text"  class="form-control" name="cognomeContatto" disabled>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="editFatt.cliente.ragioneSociale" type="text"  class="form-control" name="ragioneSociale" disabled>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="editFatt.data" type="text"  class="form-control" name="data" placeholder="Data..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="editFatt.numero"  type="number"  class="form-control" name="numero" placeholder="Numero fattura..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="editFatt.anno"  type="number"  class="form-control" name="anno" placeholder="Anno fatturazione..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="editFatt.importo"  type="text" class="form-control" name="importo" placeholder="Importo..." required>
+        </div>
+        <select class="form-select form-select-lg" [(ngModel)]="editFatt.stato" name="stato" aria-label="Default select example" >
+            <option selected>Stato fattura...</option>
+            <option  *ngFor="let item of stato" [ngValue]="item" >{{item.nome}}</option>
+        </select>
+    </div>
+</form>
+    <div>
+        <button (click)="saveEditFatture(editFatt)" class="btn btn-dark form-control" type="submit"><i class="bi bi-pencil-fill" >Modifica</i></button>
+    </div>
+    <div>
+        <button class="btn btn-light form-control" type="submit" [routerLink]="['/fatture/page/:page']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-right"> Torna alle FATTURE</i></button>
+    </div>
+

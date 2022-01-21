@@ -1,0 +1,39 @@
+<h1>PROVINCE <div class="zoom"><button type="button" class="btn btn-light m-2" [routerLink]="['/newProvince']" routerLinkActive="router-link-active" ><i class="bi bi-plus-lg"></i></button></div></h1>
+<table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Sigla</th>
+      <th scope="col">Azioni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of prov; index as i">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.nome}}</td>
+      <td>{{item.sigla}}</td>
+      <td class="zoom">
+        <button (click)="modificaProv(item)"  type="button" class="btn m-2"><i class="bi bi-pencil"></i></button>
+        <button (click)="removeProv(item)" type="button" class="btn m-2"><i class="bi bi-trash"></i></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" >
+        <a class="page-link" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item" *ngFor="let num of pageNumbers">
+        <a class="page-link" href="province/page/{{num}}">{{num +1}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>

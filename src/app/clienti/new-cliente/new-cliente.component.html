@@ -1,0 +1,122 @@
+<h2 class="text-center" >NUOVO CLIENTE</h2>
+<div class="newcl">
+<form class="m-4" action="">
+    <div class="form-group row">
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.nomeContatto" type="text" class="form-control" name="nomeContatto" placeholder="Nome..." required>
+        </div>
+        <div class="col-6">
+            <input  [(ngModel)]="newCliente.cognomeContatto" type="text"  class="form-control" name="cognomeContatto" placeholder="Cognome..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.telefono" type="number" class="form-control" name="telefono" placeholder="Telefono..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.email" type="email"  class="form-control" name="email" placeholder="Email ..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.ragioneSociale" type="text" class="form-control" name="ragioneSociale" placeholder="Ragione Sociale ..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.partitaIva" type="number" class="form-control" name="partitaIva" placeholder="P.Iva ..." required>
+        </div>
+        <div class="col-6">
+            <select [(ngModel)]="newCliente.tipoCliente" class="form-control" name="tipoCliente" required>
+                <option selected>Seleziona Tipo Cliente...</option>
+                <option>SPA</option>
+                <option>SAS</option>
+                <option>PA</option>
+                <option>SRL</option>
+                <option>SR</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.pec" type="email"  class="form-control" name="pec" placeholder="Pec..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.telefonoContatto"  type="number"  class="form-control" name="telefonoContatto" placeholder="Telefono Contatto..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.emailContatto"  type="email"  class="form-control" name="emailContatto" placeholder="Email Contatto..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.dataInserimento"  type="text"  class="form-control" name="dataInserimento" placeholder="Data Inserimento..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.dataUltimoContatto"  type="text" class="form-control" name="dataUltimoContatto" placeholder="Data Ultimo Contatto..." required>
+        </div>
+        <div class="col-6">
+            <input [(ngModel)]="newCliente.fatturatoAnnuale"  type="number"  class="form-control" name="fatturatoAnnuale" placeholder="Fatturato Annuale..." required>
+        </div>
+        <div class="col-6 d-grid gap-2 d-md-flex">
+            <button class="btn" type="button"><i class="bi bi-house-door-fill" (click)="sedeOperativa()"> Sede Operativa</i></button>
+            <button class="btn" type="button"><i class="bi bi-house-door" (click)="sedeLegale()"> Sede Legale</i></button>
+        </div>
+    </div>
+</form>
+
+<!-----SEDI----->
+<form action="">
+    <div class="sede" *ngIf="mostra">
+    <div class="container">
+        <h2 class="text-center mt-4">Indirizzo Sede Operativa</h2>
+            <div class="form-group row">
+            <div class="col-6">
+                <input [(ngModel)]="newSedeOp.via"  type="text" class="form-control" name="via" placeholder="Via ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="newSedeOp.civico"  type="text" class="form-control" name="civico" placeholder="Civico ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="newSedeOp.cap"  type="number" class="form-control" name="cap" placeholder="Cap ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="newSedeOp.localita"  type="text" class="form-control" name="localita" placeholder="Località ...">
+            </div>
+            <div class="col-6">
+            <select class="form-select form-select-lg" [(ngModel)]="newCliente.indirizzoSedeOperativa.comune" name="comune" aria-label="Default select example" >
+                <option selected  >Comune</option>
+                <option  *ngFor="let item of comuni" [ngValue]="item" >{{item.nome}}</option>
+            </select>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</form>
+
+<form action="">
+    <div class="sede" *ngIf="mostraLegale">
+    <div class="container">
+        <h2 class="text-center mt-4">Indirizzo Sede Legale</h2>
+            <div class="form-group row">
+            <div class="col-6">
+                <input [(ngModel)]="newSedeLg.via"  type="text" class="form-control" name="via" placeholder="Via ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="newSedeLg.civico"  type="text" class="form-control" name="civico" placeholder="Civico ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="newSedeLg.cap"  type="number" class="form-control" name="cap" placeholder="Cap ...">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="newSedeLg.localita"  type="text" class="form-control" name="localita" placeholder="Località ...">
+            </div>
+            <div class="col-6">
+            <select class="form-select form-select-lg" [(ngModel)]="newCliente.indirizzoSedeLegale.comune" name="comune" aria-label="Default select example" >
+                <option selected  >Comune</option>
+                <option  *ngFor="let item of comuni" [ngValue]="item" >{{item.nome}}</option>
+            </select>
+        </div>
+        </div>
+    </div>
+</div>
+</form>
+</div>
+    <div>
+        <button (click)="CreateNewCliente(newCliente)" class="btn btn-dark form-control mt-5" type="submit"><i class="bi bi-person-plus-fill" > Aggiungi</i></button>
+    </div>
+    <div>
+        <button class="btn form-control" type="button" [routerLink]="['/clienti/page/:page']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-right"> Torna a CONTATTI</i></button>
+    </div>

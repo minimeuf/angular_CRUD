@@ -1,0 +1,17 @@
+<h2 class="text-center">MODIFICA PROVINCIA</h2>
+<div class= "edPr">
+    <form  action="">
+        <div class="form-group row">
+            <div class="col-6">      
+                <input [(ngModel)]="selectProv.nome"  type="text" class="form-control" name="nome">
+            </div>
+            <div class="col-6">
+                <input [(ngModel)]="selectProv.sigla"  type="text" class="form-control" name="siglia">
+            </div>
+        </div>
+    </form>
+</div>
+    <div>
+        <button (click)="editProv(selectProv)" class="btn btn-dark form-control" type="submit" ><i class="bi bi-person-plus-fill" >Aggiungi</i></button>
+            <button class="btn form-control" type="submit" [routerLink]="['/province']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-right"> Torna alle PROVINCE</i></button>
+    </div>

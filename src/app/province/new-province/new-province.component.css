@@ -1,0 +1,31 @@
+
+h2 {
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+}
+input {
+    background-color: rgba(253, 255, 182, 0);
+    box-shadow:rgb(124, 123, 123) 0px 6px 15px 3px;
+    font-family: monospace;
+    border-radius: 15px;
+}
+.form-group input, button {
+    margin: 1vw;
+    padding: 1vw;
+    border: none;
+}
+
+.form-group input:focus
+{
+    color: none;
+    border: 1px solid rgb(255, 214, 165);
+    background: rgba(160, 196, 255, 0.212);
+    box-shadow: 0 0 0 0;
+}
+button{
+
+	border: none;
+	box-shadow:rgb(124, 123, 123) 0px 6px 15px 3px;
+    margin-bottom: 1%;
+    margin-top: 2%;
+}

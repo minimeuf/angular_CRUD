@@ -1,0 +1,23 @@
+<div id="square">
+<div class="login-page">
+    <div class="image-conteiner">
+        <div class="image">
+            <img src="https://www.informamolise.com/wp-content/uploads/2014/02/omino-ok.jpg">
+        </div>
+    </div>
+    <div class="title">
+        <h5><b>WELCOME</b></h5>
+    </div>
+    <div class="input-value">
+        <div class="input">
+            <label><b>NOME</b></label><br>
+            <input [(ngModel)]="payload.username" type="text" name="email" id="userid" placeholder="email"/><br><br>
+            <label><b>PASSWORD</b></label><br>
+            <input [(ngModel)]="payload.password" type="password" name="pass" id="pass" placeholder="password"/><br><br>
+            <div class="zoom">
+                <button class="btn btn-light" (click)="login()"><i class="bi bi-box-arrow-in-right"></i>  LogIn</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

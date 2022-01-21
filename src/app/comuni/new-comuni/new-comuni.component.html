@@ -1,0 +1,21 @@
+<h2 class="text-center">NUOVO COMUNE</h2>
+    <form action="">
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="text" [(ngModel)]="newCom.nome" class="form-control" name="nome" placeholder="Nome Comune...">
+            </div>
+            <div class="col-6">
+                <select class="form-select form-select-lg" [(ngModel)]="newCom.provincia" name="provincia" aria-label="Default select example" >
+                    <option selected  >Provincia</option>
+                    <option  *ngFor="let item of province" [ngValue]="item" >{{item.nome}}</option>
+                    <!---<option  *ngFor="let item of province" [ngValue]="item" >{{item.sigla | json}}</option>--->
+                </select>
+            </div>
+        </div>    
+    </form>
+<div >
+    <button (click)="CreateNewComune(newCom)" class="btn btn-dark form-control mt-5" type="submit"><i class="bi bi-pin-map-fill">Aggiungi</i></button>
+</div>
+<div >
+    <button class="btn form-control" type="button" [routerLink]="['/comuni']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-right"> Torna alle PROVINCE</i></button>
+</div>

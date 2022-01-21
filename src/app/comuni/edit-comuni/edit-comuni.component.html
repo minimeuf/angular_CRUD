@@ -1,0 +1,18 @@
+<h2 class="text-center">MODIFICA COMUNE</h2>
+<form class="m-4" action="">
+    <div class= "container m-3">
+            <label>Nome</label>
+            <input [(ngModel)]="SelectComune.nome"  type="text" class="form-control" name="comune">
+            <select class="form-control mt-3" [(ngModel)]="SelectComune.provincia" name="nome" required>
+                <option selected>Seleziona Provincia...</option>
+                <option *ngFor="let item of province" [ngValue]="item">{{item.nome}}</option>
+            </select>
+    </div>
+</form>
+
+    <div>
+        <button (click)="editCom(SelectComune)" class="btn btn-dark form-control" type="submit" ><i class="bi bi-person-plus-fill" >Aggiungi</i></button>
+        <button class="buttonagg btn btn-light form-control" type="submit" [routerLink]="['/comuni']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-right"> Torna ai COMUNI</i></button>
+    </div>
+
+
